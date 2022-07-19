@@ -1,0 +1,209 @@
+/* 
+global styles
+*/
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif 'Times New Roman', Times, serif;
+    font-size: 10px;
+    margin: 0;
+    width: 100vw;
+    text-align: center;
+    overflow-x:hidden ;
+}
+img{
+    max-width: 100%;
+}
+hr{
+    width: 100%;
+    opacity: 0.5;
+    color: ]lightcoral;
+}
+ul{
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+text-decoration: none;
+color: inherit;
+}
+/*
+header section
+*/
+header{
+    background: #1e484a;
+    padding: 1rem;
+    height: 100vh;
+}
+nav ul{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: end;
+}
+nav li{
+    margin: 0 1rem;
+}
+header h1{
+    font-size: 5rem;
+}
+header p{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+}
+.rotate{
+    margin-top: 2rem;
+    font-size: 3rem;
+    opacity: 5;
+}
+/*
+parallax section
+*/
+
+.parallax{
+     background-image: url('images/IMG_20220717_134930.jpg');
+     height: 100vh;
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+
+
+}
+.parallax ul{
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+.parallax li{
+    margin: 1.5rem 0;
+}
+/*
+recent moments section
+*/
+
+.recent-moments{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+
+}
+
+.recent-moments-title{
+    font-size: 1.7rem ;
+}
+.recent-moments-info{
+    padding: 1rem;
+
+
+}
+.recent-moments-info h4{
+   font-size: 1.4rem; 
+}
+.visit > li {
+    margin: 1rem 0;
+
+}
+/*
+contact us section
+*/
+#contact {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100vh;
+    background-color: beige;
+    color: aqua;
+    
+
+}
+.contact-heading {
+    margin: 0;
+    font-size: 5rem;
+
+}
+.contact-text  {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+}
+
+#contact .rotate { 
+    display: block];
+}
+ @media  (min-width: 860px){
+    nav ul {
+       justify-content: flex-end; 
+    }
+   
+    .rotate {
+        margin: 2rem 0 0 0;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        font-size: 5rem;
+
+    }
+    header {
+        height: 100%;
+
+    }
+
+    .recent-moments {
+        flex-direction: row;
+    }
+    .recent-moments-info{
+        flex: 1;
+        padding: 1rem;
+
+    }
+    .recent-moments-image {
+        flex: 2;
+        border: lightslategray 1rem solid;
+         
+    }
+    .recent-moments-image  img {
+        width: 100%:;
+        height: 100%;
+
+        
+    }
+    .move-right {
+        order: 1;
+    }
+    .contact-heading{
+        margin: 0;
+        font-size: 8rem;
+
+    }
+    #contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+
+    }
+    #conatct.rotate  {
+
+        display: block;
+    }
+
+
+}
+
+.fade-in-custom {
+    opacity: 0;
+    animation: fadein ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+.delay1{
+    animation-delay: 0.5s;
+}
+
+
+@keyframes fadein{
+
+to{opacity:1;}
+
+}
