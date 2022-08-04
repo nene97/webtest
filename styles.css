@@ -1,14 +1,20 @@
 /* 
 global styles
 */
+html{
+    background: eee;
+}
 
 body{
     font-family:Georgia, 'Times New Roman', Times, serif 'Times New Roman', Times, serif;
     font-size: 10px;
-    margin: 0;
+    margin: 0 auto;
     width: 100vw;
     text-align: center;
     overflow-x:hidden ;
+    max-width: 1500px;
+    background: white;
+   
 }
 img{
     max-width: 100%;
@@ -131,7 +137,73 @@ contact us section
 #contact .rotate { 
     display: block];
 }
- @media  (min-width: 860px){
+
+/*
+  projects page
+
+*/
+.project-title{
+    font-size: 1.6rem;
+}
+#work1{
+    grid-area: work1;
+}
+#work2{
+    grid-area: work2;
+}
+#work3{
+    grid-area: work3;
+}
+#work4{
+    grid-area: work4;
+}
+#work5{
+    grid-area: work5;
+}
+#work6{
+    grid-area: work6;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+
+}
+.grid-item{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: lightseagreen;
+    position: relative;
+}
+.grid-item img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.hidden-text{
+    display: none;
+
+}
+.grid-item:hover > .hidden-text{
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.grid-item:hover img{
+    filter: brightness(40%);
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+
+
+
+@media  (min-width: 860px){
     nav ul {
        justify-content: flex-end; 
     }
@@ -186,7 +258,14 @@ contact us section
 
         display: block;
     }
-
+.projects{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.grid-item{
+    flex-basis: 45%;
+}
 
 }
 
@@ -206,4 +285,21 @@ contact us section
 
 to{opacity:1;}
 
+}
+@media(min-width:1000px ) {
+    .projects{
+        display: grid;
+        height:100vh;
+        grid-template-columns:repeat(3,1fr);
+        grid-gap: 20px;
+        grid-template-areas: 
+        "work1 work4 work6"
+        "work2 work5 work6"
+        "work3 work3 work3"
+        ;
+    }
+
+    .grid-item{
+        margin-bottom: 0;
+    }
 }
